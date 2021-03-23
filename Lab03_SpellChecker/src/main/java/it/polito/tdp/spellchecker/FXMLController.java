@@ -59,10 +59,9 @@ public class FXMLController {
     	for(RichWord rwi : RichWord) {
     		if(!rwi.isCorrect) {
     			error += rwi.getWord()+"\n";
+    			numErrori++;
     		}
     	}
-    	
-    	numErrori = word.size()-RichWord.size();
     	
     	txtarea2.setText(error);
     	this.numeroErrori.setText("ERRORI TOTALI: "+numErrori);

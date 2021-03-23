@@ -19,18 +19,18 @@ public class Dictionary {
 	
 	public void loadDictionary(String language) {
 		
-		String s = "";
+		String s;
 		
 		if(language.equals("English")) {
-			s = "scr/main/resources/English.txt";
+			s = "src/main/resources/English.txt";
 		}else {
-			s = "scr/main/resources/Italian.txt";
+			s = "src/main/resources/Italian.txt";
 		}
 		
 		try {
 			FileReader fr = new FileReader(s);
 			BufferedReader br = new BufferedReader(fr);
-			String word="";
+			String word;
 			while((word = br.readLine()) != null) {
 				dictionary.add(word);
 			}
